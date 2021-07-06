@@ -9,10 +9,20 @@
     <None Remove="Selenium.WebDriver" />
     <None Remove="Selenium.Support" />
     <None Remove="Selenium.WebDriver.ChromeDriver" />
+    <None Remove="pages\" />
+    <None Remove="tests\" />
+    <None Remove="utilities\" />
+    <None Remove="DotNetSeleniumExtras.WaitHelpers" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
     <PackageReference Include="Selenium.Support" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="91.0.4472.10100" />
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pages\" />
+    <Folder Include="tests\" />
+    <Folder Include="utilities\" />
   </ItemGroup>
 </Project>
