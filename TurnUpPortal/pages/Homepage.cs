@@ -7,10 +7,10 @@ using TurnUpPortal.utilities;
 namespace TurnUpPortal.pages
 {
     public class Homepage
-    
+
     {
-     //function to navigate to TMpage
-      public void GOTOTMpage(IWebDriver driver)
+        //function to navigate to TMpage
+        public void GOTOTMpage(IWebDriver driver)
         {
             try
             {
@@ -25,7 +25,7 @@ namespace TurnUpPortal.pages
                 timeMaterialButton.Click();
                 wait.WaitForWebElementToExist(driver, ("/ html / body / div[3] / div / div / ul / li[5] / ul / li[3] / a"), "XPath", 2);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Assert.Fail(ex.Message);
             }
