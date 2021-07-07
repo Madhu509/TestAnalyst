@@ -52,14 +52,16 @@ namespace TurnUpPortal
             tmObj.DeleteTM(driver);
         }
 
-        // [TearDown]
-        // public void CloseTestRun();
+        [TearDown]
+        public void CloseTestRun()
+        {
 
-
+        }
 
     }
-
 }
+
+
 
 
 
