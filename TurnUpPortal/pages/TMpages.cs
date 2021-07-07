@@ -62,16 +62,16 @@ namespace TurnUpPortal.pages
             //check if the created record is present in the table and has expected values
 
             IWebElement actualCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]"));
-            Assert.That(actualCode.Text == "1234", "actual Code and expected Code did not meet");
+            Assert.That(actualCode.Text == "1234", "actual Code and expected Code did not match");
 
             IWebElement actualDescription = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[3]"));
-            Assert.That(actualDescription.Text == "abcd", "actual Description and expected Description did not meet");
+            Assert.That(actualDescription.Text == "abcd", "actual Description and expected Description did not match");
 
             IWebElement actualPrice = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[4]"));
-            Assert.That(actualPrice.Text == "$23.00", "actual Price and expected Price did not meet");
+            Assert.That(actualPrice.Text == "$23.00", "actual Price and expected Price did not match");
 
             IWebElement actualTypeCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[2]"));
-            Assert.That(actualTypeCode.Text == "T", "actual TypeCode and expected TypeCode did not meet");
+            Assert.That(actualTypeCode.Text == "T", "actual TypeCode and expected TypeCode did not match");
 
 
         }
@@ -141,23 +141,23 @@ namespace TurnUpPortal.pages
 
             IWebElement ActualCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]"));
 
-            Assert.That(ActualCode.Text == "8000", "Actual Code and expected Code did not meet");
+            Assert.That(ActualCode.Text == "8000", "Actual Code and expected Code did not match");
 
 
 
             IWebElement ActualDescription = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[3]"));
 
-            Assert.That(ActualDescription.Text == "madhu", "Actual Description and expected Description did not meet");
+            Assert.That(ActualDescription.Text == "madhu", "Actual Description and expected Description did not match");
 
 
             IWebElement ActualPrice = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[4]"));
 
-            Assert.That(ActualPrice.Text == "$500.00", "Actual Price and expected Price did not meet");
+            Assert.That(ActualPrice.Text == "$500.00", "Actual Price and expected Price did not match");
 
 
             IWebElement ActualTypeCode = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[2]"));
 
-            Assert.That(ActualTypeCode.Text == "T", "Actual TypeCode and expected TypeCode did not meet");
+            Assert.That(ActualTypeCode.Text == "T", "Actual TypeCode and expected TypeCode did not match");
 
 
         }
