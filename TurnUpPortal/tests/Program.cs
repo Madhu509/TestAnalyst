@@ -1,22 +1,27 @@
 ﻿using System;
 using System.Threading;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using TurnUpPortal.pages;
+using TurnUpPortal.utilities;
 
 namespace TurnUpPortal
 {
-    class Program
+    [TestFixture]
+
+    class Program : CommonDriver
     {
-        static void Main(string[] args)
+
+        [SetUp]
+
+        public void LoginSteps()
         {
-            Console.WriteLine("Hello World!");
-
             // open chrome browser
-            IWebDriver driver = new ChromeDriver();
+            driver = new ChromeDriver();
 
-           //object for login page
-            loginpage loginObj = new loginpage();
+            //object for login page
+            LoginPage loginObj = new LoginPage();
             loginObj.LoginActions(driver);
 
             //object for homepage
@@ -24,26 +29,59 @@ namespace TurnUpPortal
             Homepage homeObj = new Homepage();
             homeObj.GOTOTMpage(driver);
 
-
-            // object for TMpages
-
-            TMpages TMObj = new TMpages();
-            TMObj.createTM(driver);
-
-            //call the method for edit and delete TMpages
-
-            TMObj.EditTM(driver);
-
-            TMObj.DeleteTM(driver);
-
-            TMObj.Mpages(driver);
-
-            TMObj.editTM(driver);
-
-            TMObj.deleteTM(driver);
-
         }
-    }
-}          
-               
-               
+        [Test]
+
+        public void CreateTMTest()
+        {
+            TMpages tmObj = new TMpages();
+            tmObj.CreateTM(driver);
+        }
+        [Test]
+
+        public void EditTMTest()
+
+        {
+            TMpages tmObj = new TMpages();
+            tmObj.EditTM(driver);
+        }
+        [Test]
+        public void DeleteTMTest()
+        {
+            TMpages tmObj = new TMpages();
+            tmObj.DeleteTM(driver);
+        }
+
+        // [TearDown]
+        // public void CloseTestRun();
+
+
+
+    }  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
