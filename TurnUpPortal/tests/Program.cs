@@ -9,31 +9,18 @@ using TurnUpPortal.utilities;
 namespace TurnUpPortal
 {
     [TestFixture]
+    [Parallelizable]
 
     class Program : CommonDriver
     {
-
-        [SetUp]
-
-        public void LoginSteps()
-        {
-            // open chrome browser
-            driver = new ChromeDriver();
-
-            //object for login page
-            LoginPage loginObj = new LoginPage();
-            loginObj.LoginActions(driver);
-
-            //object for homepage
-
-            Homepage homeObj = new Homepage();
-            homeObj.GOTOTMpage(driver);
-
-        }
         [Test]
 
         public void CreateTMTest()
         {
+
+            Homepage homeObj = new Homepage();
+            homeObj.GOTOTMpage(driver);
+
             TMpages tmObj = new TMpages();
             tmObj.CreateTM(driver);
         }
@@ -42,21 +29,23 @@ namespace TurnUpPortal
         public void EditTMTest()
 
         {
+            Homepage homeObj = new Homepage();
+            homeObj.GOTOTMpage(driver);
+
             TMpages tmObj = new TMpages();
             tmObj.EditTM(driver);
         }
         [Test]
         public void DeleteTMTest()
         {
+            Homepage homeObj = new Homepage();
+            homeObj.GOTOTMpage(driver);
+
             TMpages tmObj = new TMpages();
             tmObj.DeleteTM(driver);
         }
 
-        [TearDown]
-        public void CloseTestRun()
-        {
-
-        }
+        
 
     }
 }
